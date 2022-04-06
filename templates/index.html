@@ -1,0 +1,15 @@
+{% extends 'base.html' %} {%block introduction%}
+<ul type="none">
+  {%for aid,aname in artists%}
+  <div class="list-box">
+    {%if aid == current%}
+    <li class="current">{{aname}}</li>
+    {%else%}
+    <li>
+      <a href="/songs/{{aid}}"><p>{{aname}}</p></a>
+    </li>
+    {%endif%}
+  </div>
+  {%endfor%}
+</ul>
+{%endblock%}

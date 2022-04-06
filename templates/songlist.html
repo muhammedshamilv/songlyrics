@@ -1,0 +1,19 @@
+{% extends 'index.html' %}
+{%block songs %}
+<h4>
+These are the songs for {{singer[1]}}
+</h4>
+<p>
+<ul type="none">
+{%for song,sid in songs%}
+<div class="list-box">
+    {%if sid==csong %}
+        <li class="current">{{song}}</li>
+    {%else%}
+        <li><a href="{{url_for('lyrics',aid=current,sid=sid)}}">{{song}} </a></li>
+    {%endif%}
+</div>
+{%endfor%}
+</ul>
+</p>
+{%endblock%}    

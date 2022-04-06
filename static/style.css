@@ -1,0 +1,59 @@
+div.col-3 {
+  padding-top: 10px;
+  border-right: 1px outset black;
+  font-size: 75%;
+}
+div.col-6 {
+  padding-top: 10px;
+  font-variant: normal;
+  font-style: italic;
+  font-size: large;
+}
+a {
+  font-size: large;
+}
+pre {
+  font-weight: 900;
+  color: hsl(9, 95%, 49%);
+}
+h4 {
+  color: #467fb9;
+}
+li.current {
+  font-size: large;
+  background-color: rgb(129, 194, 188);
+}
+.nav-bar {
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  height: 93px;
+  margin: 0;
+}
+.heading {
+  display: contents;
+  text-align: center;
+}
+.song {
+  color: rgb(45, 45, 45);
+  background: transparent;
+}
+.lyrics {
+  color: #467fb9;
+  background: transparent;
+}
+.com {
+  color: rgb(45, 45, 45);
+  background: transparent;
+  padding-top: 17px;
+}
+.foot {
+  background-color: lightgreen;
+  display: grid;
+  justify-content: center;
+  height: 50px;
+  top: 50%;
+  padding-top: 15px;
+}
