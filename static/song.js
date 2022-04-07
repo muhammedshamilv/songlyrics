@@ -4,7 +4,8 @@ function main() {
     success: (data) => {
       list = '';
       data.forEach((element) => {
-        list += '<li class="items">' + element.name + '</li>';
+        list +=
+          `<li class="items" value=${element.id}>` + element.name + `</li>`;
       });
       tag = `<ul type="none" class="a">${list}</ul>`;
       $('div.artist').html(tag);
@@ -13,7 +14,20 @@ function main() {
     },
   });
   $(document).on('click', 'li.items', function () {
-    alert($(this).text());
+    console.log(this.value);
+    $.get({
+      url: `http://127.0.0.1:5000/songs/${this.value}`,
+      success: (data) => {
+        console.log(data);
+        list = '';
+        data.forEach((element) => {
+          list +=
+            `<li class="song" value=${element.id}>` + element.name + `</li>`;
+        });
+        tag = `<ul type="none" class="a">${list}</ul>`;
+        $('div.songs').html(tag);
+      },
+    });
   });
 }
 $(main);

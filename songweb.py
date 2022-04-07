@@ -16,9 +16,11 @@ def get_artist():
 @app.route("/songs/<int:aid>")
 def list_all_songs(aid):
     songs= lyric.get_all_songs(aid)
+    songs_arr = [{'id':i[1], "name":i[0]} for i in songs]
     singer=lyric.singer(aid)
-    artists = lyric.get_all_artist()
-    return render_template("songlist.html",singer=singer, current=aid,artists=artists,songs=songs)
+    print(songs_arr)
+    return jsonify(songs_arr)
+
 
 @app.route("/songs/<int:aid>/lyrics/<int:sid>")
 def lyrics(aid,sid):
