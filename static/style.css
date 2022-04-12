@@ -19,9 +19,12 @@ pre {
 h4 {
   color: #467fb9;
 }
+li {
+  cursor: pointer;
+}
 li.current {
-  font-size: large;
-  background-color: rgb(129, 194, 188);
+  /* font-size: large; */
+  color: rgb(129, 194, 188);
 }
 .nav-bar {
   background-color: rgb(255, 255, 255);
